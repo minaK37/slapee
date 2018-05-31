@@ -1,0 +1,24 @@
+{
+  "name": "MyExtensionStudies",
+  "version": "0.1.0",
+  "description": "Practise of Chrome Extension",
+  "browser_action": {
+  "48": "icons/icon.png"
+},
+  "permissions": [
+    "<all_urls>",
+    "activeTab",
+    "tabs",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches" : ["<all_urls>"],
+      "js": [
+        "content.js"
+      ],
+      "run_at" : "document_end"
+    }
+  ],
+  "manifest_version": 2
+}
